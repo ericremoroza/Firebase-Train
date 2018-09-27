@@ -1,0 +1,12 @@
+body {
+    background:url(../images/maxresdefault.jpg);
+}
+
+
+.jumbotron {
+    text-align:center;
+    background-color:#0193CF;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#FFFFFF;
+}
+
