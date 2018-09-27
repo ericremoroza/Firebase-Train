@@ -24,29 +24,58 @@
 
         <div class="row">
             <div class="col-md-12">
-
+                <!--current train schedule-->
                 <div class="panel panel">
                     <div class="panel-heading">
                         <h3>Current Train Schedule</h3>
                     </div>
-                </div>
 
-                <div class="panel-body">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Train Name</th>
-                                <th>Destination</th>
-                                <th>Frequency (min)</th>
-                                <th>Next Arrival</th>
-                            <tr>Minutes Away</tr>
-                            </tr>
-                        </thead>
-                    </table>
+
+                    <div class="panel-body">
+                        <table>
+                            <thead>
+                                <tr id="trainsInfo">
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency (min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
                 </div>
-                <form>
-                    <button type="submit" id="newTrain">Submit</button>
-                </form>
+                <!--add train here-->
+                <div class="panel panel">
+                    <div class="panel-heading">
+                        <h3>Add Train</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div>
+                                <label>Train Name</label>
+                                <input type="text" id="trainInput">
+                            </div>
+
+                            <div>
+                                <label>Destination</label>
+                                <input type="text" id="destInput">
+                            </div>
+                            <div>
+                                <label>First Train Time(HH:mm - military time)</label>
+                                <input type="text" id="firstTrainInput">
+                            </div>
+
+                            <div>
+                                <label>Frequency (min)</label>
+                                <input type="text" id="frequencyInput">
+                            </div>
+
+                            <button type="submit" id="newTrain">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
