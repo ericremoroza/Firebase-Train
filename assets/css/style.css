@@ -26,3 +26,18 @@ tr > th {
 .panel-body {
     text-align: -webkit-center;
 }
+
+input[type=text] {
+    display:block;
+    width: 100%;
+}
+
+#form-group {
+    text-align:left;
+}
+
+tbody > tr {
+    background-color:white;
+    border-style: solid;
+    border-color: black;
+}
