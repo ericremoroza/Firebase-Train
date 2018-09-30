@@ -10,9 +10,10 @@ body {
     color:#FFFFFF;
 }
 
-.col-md-12 {
+.col-lg-12 {
     text-align: center;
     background-color:#005979;
+    padding: 10px;
 }
 
 tr > th {
@@ -34,10 +35,19 @@ input[type=text] {
 
 #form-group {
     text-align:left;
+    color:gray;
 }
 
 tbody > tr {
     background-color:white;
     border-style: solid;
     border-color: black;
+}
+
+h3 {
+    background-color: #DCDCDC;
+}
+
+.row {
+    margin: 10px;
 }

@@ -37,6 +37,9 @@ $("#trainButton").on("click", function (event) {
   //new data pushed to database
   database.ref().push(newTrain);
 
+
+
+
   //clear text boxes
   $("#trainInput").val("");
   $("#destInput").val("");
@@ -46,24 +49,45 @@ $("#trainButton").on("click", function (event) {
 });
 
 //Firebase event prints row on index.html
-database.ref().on("child_added", function(snapshot) {
+database.ref().on("child_added", function (snapshot) {
   console.log(snapshot.val());
-  
+
   var trainName = snapshot.val().name;
   var destination = snapshot.val().dest;
   var firstTrain = snapshot.val().first;
   var frequency = snapshot.val().freq;
 
-  // console.log(trainName);
-  // console.log(destination);
-  // console.log(firstTrain);
-  // console.log(frequency);
+  //train first run
+  var firstTrainTime = moment(firstTrain, "hh:mm").subtract(1, "years");
+  console.log(firstTrainTime);
+
+  //current time
+  var currentTime = moment();
+  console.log("Current Time: " + moment(currentTime).format("HH:mm"));
+
+  //difference between times
+  var timeDifference = moment().diff(moment(firstTrainTime), "minutes");
+  console.log("Time Difference: " + timeDifference);
+
+  //remainder of time
+  var timeRemain = timeDifference % frequency;
+  console.log(timeRemain);
+
+  //time until train in minutes
+  var nextTrainMin = frequency - timeRemain;
+  console.log("Minutes until Train: " + nextTrainMin);
+
+  //next train arrival time
+  var nextTrainTime = moment().add(nextTrainMin, "minutes").format("hh:mm");
+  console.log("Arrival Time: " + moment(nextTrainTime).format("HH:mm"));
+
 
   var newRow = $("<tr>").append(
     $("<td>").text(trainName),
     $("<td>").text(destination),
-    $("<td>").text(firstTrain),
-    $("<td>").text(frequency)
+    $("<td>").text(frequency),
+    $("<td>").text(nextTrainTime),
+    $("<td>").text(nextTrainMin)
   );
 
   $("#trainsInfo > tbody").append(newRow);
