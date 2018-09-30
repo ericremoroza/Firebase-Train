@@ -18,12 +18,18 @@ body {
 
 tr > th {
     text-align:left;
-    display:inline-block;
+    border-collapse:initial;
     padding-left: 10px;
     margin-left: 10px;
     line-height: 15px;
 }
-
+table {
+    border-collapse:initial;
+    text-align:center;
+}
+thead {
+    background-color: #F9A215;
+}
 .panel-body {
     text-align: -webkit-center;
 }
