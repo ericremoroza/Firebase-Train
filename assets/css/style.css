@@ -26,6 +26,7 @@ tr > th {
 table {
     border-collapse:initial;
     text-align:center;
+    width: -webkit-fill-available;
 }
 thead {
     background-color: #F9A215;
