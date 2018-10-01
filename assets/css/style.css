@@ -17,7 +17,6 @@ body {
 }
 
 tr > th {
-    text-align:left;
     border-collapse:initial;
     padding-left: 10px;
     margin-left: 10px;
@@ -42,7 +41,8 @@ input[type=text] {
 
 #form-group {
     text-align:left;
-    color:gray;
+    color:#FFFFFF;;
+    font-weight:bold;
 }
 
 tbody > tr {
